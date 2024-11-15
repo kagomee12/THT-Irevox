@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import router from './src/routes';
 
 dotenv.config();
 
@@ -15,6 +16,8 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+
+app.use(router)
 
 app.listen(port, async () => {
     console.log(`App listening on port ${port}`)
