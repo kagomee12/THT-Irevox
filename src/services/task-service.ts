@@ -64,23 +64,6 @@ export const deleteTask = async (id: number) => {
 
 export const updateTask = async (id: number, data: any) => {
   try {
-    // const findTask = await db.task.findFirst({
-    //   where: {
-    //     id,
-    //   },
-    // });
-
-    // if (findTask?.completed === data) {
-    //   return await db.task.update({
-    //     data: {
-    //       completed: !data,
-    //     },
-    //     where: {
-    //       id,
-    //     },
-    //   });
-    // }
-
     const updatedTask = await db.task.update({
       data: data,
       where: {
