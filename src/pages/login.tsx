@@ -1,11 +1,7 @@
-import React from 'react';
+import { LoginLayout } from "../features/auth/login-layout";
 
 const Login = () => {
-    return (
-        <div className=''>
-            
-        </div>
-    );
-}
+  return <LoginLayout />;
+};
 
 export default Login;
