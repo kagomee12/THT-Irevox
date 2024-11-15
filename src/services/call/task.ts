@@ -22,7 +22,8 @@ export const updateTask = async (
   completed: boolean,
   id: number
 ): Promise<TPromiseResponse<Task>> => {
-  const response = await api.patch(`/task/${id}`, completed);
+  
+  const response = await api.patch(`/task/${id}`, {completed});
   return response.data;
 };
 

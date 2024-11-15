@@ -17,11 +17,12 @@ const Layout = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     localStorage.removeItem("token");
-    setIsLogin(false);
     usequeryClient.invalidateQueries({ queryKey: ["me"] }).then(() => {
       setAuthToken();
+      setIsLogin(false);
       navigate("/auth/login");
     });
+    window.location.reload();
   };
   useMemo(() => {
     if (!isLogin) {
@@ -63,7 +64,6 @@ const Layout = () => {
         <button
           className="bg-secondary"
           onClick={() => handleLogout()}
-          type="submit"
         >
           Logout
         </button>
