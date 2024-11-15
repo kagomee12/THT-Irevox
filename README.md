@@ -1,7 +1,9 @@
 # My Schedule App
-## Installation
 
 ini adalah aplikasi fullstack dengan menggunakan react sebagai frontend dan express sebagai backend, aplikasi ini berfungsi untuk membuat schedule harian dan juga bisa login sebagai admin ataupun sebagai user
+
+
+## Installation
 
 Install frontend
 
